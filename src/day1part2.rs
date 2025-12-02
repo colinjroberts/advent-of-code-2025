@@ -67,7 +67,7 @@ impl DialValue {
     }
 }
 
-pub fn solve(content: String) {
+pub fn solve(content: &str) {
     let mut dial = DialValue{position:50, password_count: 0};
 
     // Iterate over each line of input

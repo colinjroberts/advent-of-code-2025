@@ -23,8 +23,8 @@ fn main() {
 
     // Choose the right code and run it!
     match daypart.as_str() {
-        "1-1" => day1part1::solve(content),
-        "1-2" => day1part2::solve(content),
+        "1-1" => day1part1::solve(&content),
+        "1-2" => day1part2::solve(&content),
         _ => panic!("Unknown day/part")
     }
 }
