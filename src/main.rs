@@ -1,4 +1,5 @@
 use std::env;
+use std::fs;
 
 mod day1part1;
 
@@ -10,8 +11,18 @@ fn main() {
         return
     };
 
-    match &args[2] {
-        String::from("1-1") => day1part1::solve(&args[2]),
+    let daypart: String = args[1].clone();
+    let input_file: String = args[2].clone();
+
+    // Read the file. I feel like I've been burned in the past
+    // by different files needing different parsing, so just
+    // read for now and let each day do its own parsing. 
+    let content: String = fs::read_to_string(input_file)
+        .expect("Should have been able to read the file");
+
+    // Choose the right code and run it!
+    match daypart.as_str() {
+        "1-1" => day1part1::solve(content),
         _ => panic!("Unknown day/part")
     }
 }
