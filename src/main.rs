@@ -4,6 +4,7 @@ use std::fs;
 mod day1part1;
 mod day1part2;
 mod day2part1;
+mod day2part2;
 
 fn main() {
     let args: Vec<String> = env::args().collect();
@@ -27,6 +28,7 @@ fn main() {
         "1-1" => day1part1::solve(&content),
         "1-2" => day1part2::solve(&content),
         "2-1" => day2part1::solve(&content),
+        "2-2" => day2part2::solve(&content),
         _ => panic!("Unknown day/part")
     }
 }
