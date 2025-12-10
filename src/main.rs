@@ -12,6 +12,8 @@ mod day4part2;
 mod day5part01;
 mod day5part1;
 mod day5part2;
+mod day6part1;
+
 
 fn main() {
     let args: Vec<String> = env::args().collect();
@@ -43,6 +45,7 @@ fn main() {
         "5-01" => day5part01::solve(&content),
         "5-1" => day5part1::solve(&content),
         "5-2" => day5part2::solve(&content),
+        "6-1" => day6part1::solve(&content),
         _ => panic!("Unknown day/part")
     }
 }
