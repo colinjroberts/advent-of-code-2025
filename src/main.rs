@@ -13,6 +13,7 @@ mod day5part01;
 mod day5part1;
 mod day5part2;
 mod day6part1;
+mod day6part2;
 
 
 fn main() {
@@ -46,6 +47,7 @@ fn main() {
         "5-1" => day5part1::solve(&content),
         "5-2" => day5part2::solve(&content),
         "6-1" => day6part1::solve(&content),
+        "6-2" => day6part2::solve(&content),
         _ => panic!("Unknown day/part")
     }
 }
